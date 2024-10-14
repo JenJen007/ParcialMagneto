@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.magnetodna.MagnetodnaApplicationTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-10-14T18:39:52" hostname="DESKTOP-GKJ2DA9" time="1.351">
+<testsuite name="com.example.magnetodna.MagnetodnaApplicationTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-10-14T22:55:55" hostname="DESKTOP-GKJ2DA9" time="2.364">
   <properties/>
-  <testcase name="testIrregularDnaMatrix()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.86"/>
-  <testcase name="[1] dnaString=ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.059"/>
-  <testcase name="[2] dnaString=ATGCGA,CAGTGC,TTATTT,AGACGG,GCGTCA,TCACTG, expected=false" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.015"/>
-  <testcase name="[3] dnaString=AAAA,AAAA,AAAA,AAAA, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.007"/>
+  <testcase name="testIrregularDnaMatrix()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="2.006"/>
+  <testcase name="[1] dnaString=ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.02"/>
+  <testcase name="[2] dnaString=ATGCGA,CAGTGC,TTATTT,AGACGG,GCGTCA,TCACTG, expected=false" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.006"/>
+  <testcase name="[3] dnaString=AAAA,AAAA,AAAA,AAAA, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.008"/>
   <testcase name="[4] dnaString=AAAA, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.006"/>
-  <testcase name="testStatsCalculation()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.292"/>
-  <testcase name="testInvalidDnaCharacters()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.005"/>
+  <testcase name="testStatsCalculation()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.251"/>
+  <testcase name="testInvalidDnaCharacters()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.006"/>
   <testcase name="testEmptyDna()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.005"/>
-  <system-out><![CDATA[15:39:44.027 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.magnetodna.MagnetodnaApplicationTests]: MagnetodnaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:39:44.536 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.magnetodna.MagnetodnaApplication for test class com.example.magnetodna.MagnetodnaApplicationTests
+  <system-out><![CDATA[19:55:48.242 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.magnetodna.MagnetodnaApplicationTests]: MagnetodnaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:55:48.400 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.magnetodna.MagnetodnaApplication for test class com.example.magnetodna.MagnetodnaApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -20,26 +20,26 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v3.2.10)
 
-2024-10-14T15:39:45.805-03:00  INFO 13644 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Starting MagnetodnaApplicationTests using Java 17.0.8 with PID 13644 (started by Tity Lacoste in C:\Users\Tity Lacoste\Downloads\magnetodna\magnetodna)
-2024-10-14T15:39:45.809-03:00  INFO 13644 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2024-10-14T15:39:47.915-03:00  INFO 13644 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-14T15:39:47.983-03:00  INFO 13644 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
-2024-10-14T15:39:48.673-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-14T15:39:48.773-03:00  INFO 13644 --- [magnetodna] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-10-14T15:39:48.829-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-14T15:39:48.973-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2024-10-14T15:39:49.204-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-14T15:39:49.248-03:00  INFO 13644 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-14T15:39:49.568-03:00  INFO 13644 --- [magnetodna] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/mutants_db user=SA
-2024-10-14T15:39:49.568-03:00  INFO 13644 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-14T15:39:49.603-03:00  WARN 13644 --- [magnetodna] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-14T15:39:49.906-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.example.magnetodna.Entities.DnaSequence
-2024-10-14T15:39:50.706-03:00 ERROR 13644 --- [magnetodna] [    Test worker] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2024-10-14T15:39:50.713-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-14T15:39:50.763-03:00  INFO 13644 --- [magnetodna] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-14T15:39:51.483-03:00  WARN 13644 --- [magnetodna] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-14T15:39:52.493-03:00  INFO 13644 --- [magnetodna] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/mutants_db'
-2024-10-14T15:39:52.583-03:00  INFO 13644 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Started MagnetodnaApplicationTests in 7.647 seconds (process running for 9.994)
+2024-10-14T19:55:49.322-03:00  INFO 2988 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Starting MagnetodnaApplicationTests using Java 17.0.8 with PID 2988 (started by Tity Lacoste in C:\Users\Tity Lacoste\Downloads\magnetodna\magnetodna)
+2024-10-14T19:55:49.322-03:00  INFO 2988 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T19:55:51.774-03:00  INFO 2988 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T19:55:51.820-03:00  INFO 2988 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2024-10-14T19:55:52.360-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T19:55:52.455-03:00  INFO 2988 --- [magnetodna] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-10-14T19:55:52.518-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T19:55:52.630-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-10-14T19:55:52.836-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T19:55:52.868-03:00  INFO 2988 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-14T19:55:53.139-03:00  INFO 2988 --- [magnetodna] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/mutants_db user=SA
+2024-10-14T19:55:53.139-03:00  INFO 2988 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-14T19:55:53.186-03:00  WARN 2988 --- [magnetodna] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-14T19:55:53.424-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.example.magnetodna.Entities.DnaSequence
+2024-10-14T19:55:54.104-03:00 ERROR 2988 --- [magnetodna] [    Test worker] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2024-10-14T19:55:54.104-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T19:55:54.151-03:00  INFO 2988 --- [magnetodna] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T19:55:54.804-03:00  WARN 2988 --- [magnetodna] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-14T19:55:55.600-03:00  INFO 2988 --- [magnetodna] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/mutants_db'
+2024-10-14T19:55:55.680-03:00  INFO 2988 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Started MagnetodnaApplicationTests in 7.068 seconds (process running for 8.51)
 Hibernate: select ds1_0.id,ds1_0.dna,ds1_0.is_mutant from dna_sequences ds1_0
 Hibernate: delete from dna_sequences where id=?
 Hibernate: delete from dna_sequences where id=?
