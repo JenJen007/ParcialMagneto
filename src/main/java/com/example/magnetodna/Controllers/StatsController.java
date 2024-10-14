@@ -1,6 +1,8 @@
 package com.example.magnetodna.Controllers;
 
 import com.example.magnetodna.Repository.DnaSequenceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +13,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class StatsController {
+    @Autowired
     private final DnaSequenceRepository dnaSequenceRepository;
 
     public StatsController(DnaSequenceRepository dnaSequenceRepository) {
@@ -18,17 +21,16 @@ public class StatsController {
     }
 
     @GetMapping("/stats")
-    public Map<String, Object> getStats() {
-        long countMutants = dnaSequenceRepository.countByIsMutant(true);
-        long countHumans = dnaSequenceRepository.countByIsMutant(false);
-        double ratio = countHumans == 0 ? 0 : (double) countMutants / countHumans;
+    public ResponseEntity<Map<String, Object>> getStats() {
+        long countMutantDna = dnaSequenceRepository.countByIsMutant(true);
+        long countHumanDna = dnaSequenceRepository.countByIsMutant(false);
+        double ratio = (countHumanDna == 0) ? 0 : (double) countMutantDna / countHumanDna;
 
-        // Crear un Map para devolver como respuesta JSON
         Map<String, Object> stats = new HashMap<>();
-        stats.put("count_mutant_dna", countMutants);
-        stats.put("count_human_dna", countHumans);
+        stats.put("count_mutant_dna", countMutantDna);
+        stats.put("count_human_dna", countHumanDna);
         stats.put("ratio", ratio);
 
-        return stats;
+        return ResponseEntity.ok(stats);
     }
 }

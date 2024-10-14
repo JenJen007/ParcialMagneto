@@ -1,8 +1,10 @@
 package com.example.magnetodna.Controllers;
 
+import com.example.magnetodna.Dto.ResponseDto;
 import com.example.magnetodna.Entities.DnaSequence;
 import com.example.magnetodna.Repository.DnaSequenceRepository;
 import com.example.magnetodna.Services.MutantService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +17,12 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api")
 public class MutantController {
+    @Autowired
     private final MutantService mutantService;
+    @Autowired
     private final DnaSequenceRepository dnaSequenceRepository;
     // HashSet para almacenar resultados de secuencias procesadas
+
     private final Set<String> processedDna = new HashSet<>();
 
 
@@ -27,13 +32,15 @@ public class MutantController {
     }
 
     @PostMapping("/mutant")
-    public ResponseEntity<String> isMutant(@RequestBody String[] dna) {
+    public ResponseEntity<ResponseDto> isMutant(@RequestBody String[] dna) {
         // Verificar si la secuencia ya existe
         if (dnaSequenceRepository.existsByDna(dna)) {
             DnaSequence existingDnaSequence = dnaSequenceRepository.findByDna(dna);
-            return existingDnaSequence.isMutant() ?
-                    ResponseEntity.ok("Mutant") :
-                    ResponseEntity.status(HttpStatus.FORBIDDEN).body("Human");
+            ResponseDto responseMessage = new ResponseDto(
+                    existingDnaSequence.isMutant() ? "Mutant" : "Human",
+                    existingDnaSequence.isMutant()
+            );
+            return ResponseEntity.ok(responseMessage);
         }
 
         boolean isMutant = mutantService.isMutant(dna);
@@ -43,7 +50,12 @@ public class MutantController {
         dnaSequence.setMutant(isMutant);
         dnaSequenceRepository.save(dnaSequence);
 
-        return isMutant ? ResponseEntity.ok("Mutant") : ResponseEntity.status(HttpStatus.FORBIDDEN).body("Human");
+        ResponseDto responseMessage = new ResponseDto(
+                isMutant ? "Mutant" : "Human",
+                isMutant
+        );
+
+        return ResponseEntity.ok(responseMessage);
     }
 
 
