@@ -1,4 +1,20 @@
-FROM amazoncorretto:17-alpine-jdk
-COPY build/libs/magnetodna-0.0.1-SNAPSHOT.jar magnetoapp.jar
+#Base image for metadata
+FROM ubuntu:latest
+LABEL authors="Jenny"
+
+#Build stage
+FROM alpine:latest as build
+
+RUN apk update
+RUN apk add openjdk17
+
+COPY . .
+RUN chmod +x ./gradlew
+RUN ./gradlew bootJar --no-daemon
+
+#Runtime stage
+FROM openjdk:17-alpine
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/magnetoapp.jar"]
+COPY --from=build /build/libs/*.jar /app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
