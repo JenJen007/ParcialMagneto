@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.magnetodna.MagnetodnaApplicationTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-10-14T03:08:11" hostname="DESKTOP-GKJ2DA9" time="2.076">
+  <properties/>
+  <testcase name="testIsMutant()" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="1.997"/>
+  <testcase name="[1] dnaString=ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.02"/>
+  <testcase name="[2] dnaString=ATGCGA,CAGTGC,TTATTT,AGACGG,GCGTCA,TCACTG, expected=false" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.004"/>
+  <testcase name="[3] dnaString=AAAA,AAAA,AAAA,AAAA, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.006"/>
+  <testcase name="[4] dnaString=AAAA, expected=true" classname="com.example.magnetodna.MagnetodnaApplicationTests" time="0.005"/>
+  <system-out><![CDATA[00:08:05.243 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.magnetodna.MagnetodnaApplicationTests]: MagnetodnaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:08:05.354 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.magnetodna.MagnetodnaApplication for test class com.example.magnetodna.MagnetodnaApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.10)
+
+2024-10-14T00:08:06.448-03:00  INFO 4936 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Starting MagnetodnaApplicationTests using Java 17.0.8 with PID 4936 (started by Tity Lacoste in C:\Users\Tity Lacoste\Downloads\magnetodna\magnetodna)
+2024-10-14T00:08:06.450-03:00  INFO 4936 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:08:07.407-03:00  INFO 4936 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:08:07.529-03:00  INFO 4936 --- [magnetodna] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2024-10-14T00:08:08.239-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:08:08.348-03:00  INFO 4936 --- [magnetodna] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-10-14T00:08:08.395-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:08:08.497-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-10-14T00:08:08.720-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:08:08.768-03:00  INFO 4936 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-14T00:08:08.864-03:00  INFO 4936 --- [magnetodna] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/test user=SA
+2024-10-14T00:08:08.864-03:00  INFO 4936 --- [magnetodna] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-14T00:08:08.911-03:00  WARN 4936 --- [magnetodna] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-14T00:08:09.176-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.example.magnetodna.Entities.DnaSequence
+2024-10-14T00:08:09.869-03:00 ERROR 4936 --- [magnetodna] [    Test worker] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2024-10-14T00:08:09.885-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:08:09.917-03:00  INFO 4936 --- [magnetodna] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:08:10.599-03:00  WARN 4936 --- [magnetodna] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-14T00:08:11.498-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/test'
+2024-10-14T00:08:11.562-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-14T00:08:11.562-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-14T00:08:11.562-03:00  INFO 4936 --- [magnetodna] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-10-14T00:08:11.609-03:00  INFO 4936 --- [magnetodna] [    Test worker] c.e.m.MagnetodnaApplicationTests         : Started MagnetodnaApplicationTests in 5.405 seconds (process running for 7.469)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
