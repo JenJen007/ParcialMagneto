@@ -20,7 +20,7 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 # Instalación
 Clonar el repositorio
 Primero, clona este repositorio en tu máquina local usando Git:
-[git clone https://github.com/JenJen007/ParcialMagneto/ParcialMagneto.git]
+git clone (https://github.com/JenJen007/ParcialMagneto/ParcialMagneto.git)
 cd magnetodna
 
 # Configurar dependencias
@@ -74,7 +74,7 @@ WORKDIR /app
 
 # Copiar el archivo JAR de la aplicación al contenedor
 COPY build/libs/snapshot.jar /app/snapshot.jar
-[ParcialMagnetoDna.pdf](https://github.com/user-attachments/files/17370737/ParcialMagnetoDna.pdf)
+
 
 # Exponer el puerto en el que se ejecuta la aplicación
 EXPOSE 8080
